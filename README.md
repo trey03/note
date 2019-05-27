@@ -2,8 +2,5 @@
 
 Typora + github 个人云存储笔记
 
-vscode + github 
+vscode + github
 
-- one
-- two
-- three
