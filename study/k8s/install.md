@@ -1,6 +1,3 @@
-# install
-
-
 ###机器信息
 ```text
 192.168.1.100   k8s-master
