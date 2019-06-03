@@ -135,3 +135,4 @@ kubeadm join 192.168.1.102:6443 --token abcdef.0123456789abcdef \
 ```shell
 route add default gw 192.168.1.1
 ```
+
