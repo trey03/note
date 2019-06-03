@@ -1,3 +1,4 @@
+
 ###机器信息
 ```text
 192.168.1.100   k8s-master
@@ -134,3 +135,4 @@ kubeadm join 192.168.1.102:6443 --token abcdef.0123456789abcdef \
 ```shell
 route add default gw 192.168.1.1
 ```
+
