@@ -7,4 +7,4 @@
     * [minikube](study/k8s/minikube.md)
     * [install](study/k8s/install.md)
   * [gitlab](study/gitlab.md)
-
+* [favorite]
