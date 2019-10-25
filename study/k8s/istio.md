@@ -13,6 +13,7 @@ curl -L https://git.io/getLatestIstio | ISTIO_VERSION=1.1.7 sh -
 执行将istio安装到kubernates中
 
 ```text
+for i in install/kubernetes/helm/istio-init/files/crd*yaml; do kubectl apply -f $i; done
 kubectl apply -f install/kubernetes/istio-demo.yaml
 ```
 
