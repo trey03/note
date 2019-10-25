@@ -1,13 +1,16 @@
+# install
 
-###机器信息
+## 机器信息
+
 ```text
 192.168.1.100   k8s-master
 192.168.1.101   k8s-node-01
 192.168.1.102   k8s-node-02
 ```
 
-###准备信息
-```shell 
+## 准备信息
+
+```text
 # 所有机器
 systemctl stop firewalld
 systemctl disable firewalld
@@ -29,7 +32,7 @@ net.ipv4.ip_forward = 1
 net.bridge.bridge-nf-call-ip6tables = 1
 """ > /etc/sysctl.conf
 sysctl -p
- 
+
 # 同步时间
 yum install -y ntpdate
 ntpdate -u ntp.api.bz
@@ -39,7 +42,7 @@ ntpdate -u ntp.api.bz
 
 # 检查默认内核版本是否大于4.14，否则请调整默认启动参数
 grub2-editenv list
- 
+
 #重启以更换内核
 reboot
 
@@ -62,10 +65,10 @@ chmod 755 /etc/sysconfig/modules/ipvs.modules && bash /etc/sysconfig/modules/ipv
 # 所有主机：检查UUID和Mac
 cat /sys/class/dmi/id/product_uuid
 ip link
-
 ```
 
 执行sysctl -p报错请参考centos7添加bridge-nf-call-ip6tables出现No such file or directory
+
 ```text
 解决方法：
 [root@localhost ~]# modprobe br_netfilter
@@ -73,14 +76,15 @@ ip link
 bridge-nf-call-arptables bridge-nf-filter-pppoe-tagged
 bridge-nf-call-ip6tables bridge-nf-filter-vlan-tagged
 bridge-nf-call-iptables bridge-nf-pass-vlan-input-dev
- 
+
 [root@localhost ~]# sysctl -p
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
 ```
 
-###安装Docker
-```shell
+## 安装Docker
+
+```text
 yum install -y docker-ce
 
 # 编辑systemctl的Docker启动文件和配置文件
@@ -97,7 +101,7 @@ cat > /etc/docker/daemon.json <<EOF
   "registry-mirrors": ["https://1ob3wirb.mirror.aliyuncs.com"]
 }
 EOF
- 
+
 # 启动docker
 systemctl daemon-reload
 systemctl enable docker
@@ -108,13 +112,11 @@ docker load < k8s.tar
 
 #安装kubeadm kubelet kubectl
 yum install -y kubelet kubeadm kubectl
-
 ```
 
+## 启动服务
 
-###启动服务
-```shell
-
+```text
 systemctl enable kubelet.service
 systemctl start kubelet.service
 
@@ -128,11 +130,11 @@ kubectl -n kube-system describe secret $(kubectl -n kube-system get secret |grep
 #add work node
 kubeadm join 192.168.1.102:6443 --token abcdef.0123456789abcdef \
     --discovery-token-ca-cert-hash sha256:01baf966bf3d781695e02ed36266db02fc7be0a989016c7ea6885b97e27b09ab
-
 ```
 
-###网络路由
-```shell
+## 网络路由
+
+```text
 route add default gw 192.168.1.1
 ```
 
