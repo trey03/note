@@ -46,6 +46,8 @@ $ minikube start --memory=8192 --cpus=4 --kubernetes-version=v1.13.0 \
 
 ```bash
 minikube config set vm-driver virtualbox
+minikube config set memory 8192
+minikube config set cpus 4
 
 minikube start --image-mirror-country cn \
     --iso-url=https://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/iso/minikube-v1.5.0.iso \
