@@ -44,6 +44,14 @@ $ minikube start --memory=8192 --cpus=4 --kubernetes-version=v1.13.0 \
     --vm-driver=`your_vm_driver_choice`
 ```
 
+```bash
+minikube start --image-mirror-country cn \
+    --iso-url=https://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/iso/minikube-v1.5.0.iso \
+    --registry-mirror=https://1ob3wirb.mirror.aliyuncs.com
+    --memory=8192 --cpus=4 --kubernetes-version=v1.16.0 \
+    --vm-driver=`virtualbox`
+```
+
 打开Kubernetes控制台
 
 ```text
