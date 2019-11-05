@@ -9,5 +9,6 @@
     * [Install Harbor](study/k8s/install-harbor.md)
   * [gitlab](study/gitlab.md)
 * [favorite](favorite/README.md)
+  * [k8s others](favorite/k8s-others.md)
   * [urls](favorite/urls.md)
 
