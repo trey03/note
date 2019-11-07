@@ -13,15 +13,13 @@ curl -L https://git.io/getLatestIstio | ISTIO_VERSION=1.1.7 sh -
 执行将istio安装到kubernates中
 
 ```text
-for i in install/kubernetes/helm/istio-init/files/crd*yaml; do kubectl apply -f $i; done
-kubectl apply -f install/kubernetes/istio-demo.yaml
+for i in install/kubernetes/helm/istio-init/files/crd*yaml; do kubectl apply -f $i; donekubectl apply -f install/kubernetes/istio-demo.yaml
 ```
 
 观察部署情况
 
 ```text
-kubectl get svc -n istio-system
-kubectl get pods -n istio-system
+kubectl get svc -n istio-systemkubectl get pods -n istio-system
 ```
 
 基于minikube，打开网络
@@ -37,11 +35,7 @@ minikube tunnel
 更新istio部署
 
 ```text
-> for i in install/kubernetes/helm/istio-init/files/crd*yaml; do kubectl apply -f $i; done
-
-> helm template install/kubernetes/helm/istio --name istio \\n--namespace istio-system > ./istio.yaml
-
-> kubectl apply -f istio.yaml
+> for i in install/kubernetes/helm/istio-init/files/crd*yaml; do kubectl apply -f $i; done> helm template install/kubernetes/helm/istio --name istio \\n--namespace istio-system > ./istio.yaml> kubectl apply -f istio.yaml
 ```
 
 * 部署bookinfo且例
