@@ -6,6 +6,8 @@
 
 ## JVM
 
+* Sample [Options](https://www.cnblogs.com/fightingcode/p/11232694.html)
 * JDK1.7 [options](https://www.oracle.com/technetwork/java/javase/tech/vmoptions-jsp-140102.html#Options)
 * JDK13 [options](https://docs.oracle.com/en/java/javase/13/vm/index.html)
+  * Log [options](https://docs.oracle.com/en/java/javase/13/jrockit-hotspot/logging.html#GUID-962A4EDC-33DE-4D8B-A00D-C76EDFDD2C9B) [details](https://docs.oracle.com/en/java/javase/13/docs/specs/man/java.html#enable-logging-with-the-jvm-unified-logging-framework)
 
