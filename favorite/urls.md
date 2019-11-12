@@ -15,3 +15,12 @@
 
 
 
+## 技术类
+
+* [False sharing](https://www.cnblogs.com/cyfonly/p/5800758.html) 
+* [False sharing 2](https://zhuanlan.zhihu.com/p/21355046)
+
+## Helm
+
+* [入门指南](https://www.hi-linux.com/posts/21466.html)
+
