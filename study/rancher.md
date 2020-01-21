@@ -27,6 +27,9 @@ docker run -d --restart=no -v /Users/chenfeng/rancher:/var/lib/rancher/ -p 8090:
 
 [https://run.i3hh.com:1443/](https://run.i3hh.com:1443/)  admin/admin
 
+* 使用域名时需要注意	cattle-cluster-agent 可能会启动失败，因为在启动需要通过域名来访问rancher集群，这时域名解析不到导致无法启动，解决办法是给cattle-cluster-agent手动配置一下host
+* CoreDNS配置
+
 ## Install harbor
 
 Download harbor and unzip to local host's path

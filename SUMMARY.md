@@ -4,6 +4,7 @@
 * [study](study/README.md)
   * [AENV](study/rancher.md)
   * [k8s](study/k8s/README.md)
+    * [CoreDNS](study/k8s/coredns.md)
     * [istio](study/k8s/istio.md)
     * [minikube](study/k8s/minikube.md)
     * [install](study/k8s/install.md)
