@@ -62,3 +62,20 @@ sudo docker run --detach \
 
 
 
+## Install Nexus3
+
+```text
+docker run -d --name nexus \
+       --restart=no \
+       -p 5000:5000 \
+       -p 8081:8081 \
+       -v /Users/chenfeng/datas/nexus-data:/nexus-data \
+       sonatype/nexus3
+```
+
+http://rep.i3hh.com:8081 admin/abc123456
+
+
+
+
+

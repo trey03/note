@@ -24,19 +24,3 @@
 
 * [入门指南](https://www.hi-linux.com/posts/21466.html)
 
-
-
-## Rancher
-
-[中文](https://docs.rancher.cn/)
-
-[Rancher 2.x 搭建及管理 Kubernetes 集群](https://blog.csdn.net/aixiaoyang168/article/details/88600530)
-
-[RKE安装](https://blog.csdn.net/apicescn/article/details/82382542)
-
-[基础安装](https://www.cnblogs.com/surplus/p/11419490.html)
-
-[负载均衡](https://blog.csdn.net/aixiaoyang168/article/details/88664263)
-
-[离线HA](https://www.cnblogs.com/weavepub/p/11053099.html)
-
